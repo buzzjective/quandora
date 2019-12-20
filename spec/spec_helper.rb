@@ -1,0 +1,28 @@
+require "bundler/setup"
+require "webmock/rspec"
+require "quandora"
+require "byebug"
+require "support/stubs"
+
+WebMock.disable_net_connect!(allow_localhost: true)
+
+Quandora.configuration.url = "https://example.quandora.com/m/json"
+Quandora.configuration.username = "example@example.com"
+Quandora.configuration.password = "password"
+
+RSpec.configure do |config|
+  # Enable flags like --only-failures and --next-failure
+  config.example_status_persistence_file_path = ".rspec_status"
+
+  # Disable RSpec exposing methods globally on `Module` and `main`
+  config.disable_monkey_patching!
+
+  config.expect_with :rspec do |c|
+    c.syntax = :expect
+  end
+
+  config.include Stubs
+  config.before(:each) do
+    default_stubs
+  end
+end
