@@ -1,4 +1,9 @@
 class Quandora::Bases < Quandora::Request
+  def index
+    @api = "kb/"
+    index
+  end
+
   def questions(base_id, args = {})
     @api = "kb/#{base_id}/list"
     @params.merge!("q": args["q"]) unless args.fetch('q', nil).nil?
