@@ -19,8 +19,19 @@ class Quandora::Bases < Quandora::Request
   end
 
   def ask(base_id, args = {})
-    @api = "kb/#{base_id}/ask"
-    index
+    body = {
+      "type" : "post-question",
+      "data" : {
+        "title" : args["title"],
+        "content" : args["content"],
+        "contentType" : args["content_type"] || "markdown"
+      }
+    }
+
+    resp = @conn.post("kb/#{base_id}/ask") do |req|
+      req.body = body.to_json
+      req.headers['Content-Type'] = 'application/json'
+    end
   end
 
   def follow(base_id, args = {})

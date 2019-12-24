@@ -79,7 +79,14 @@ bases apis:
 index: Quandora.bases.index
 questions: Quandora.bases.questions('base_id')
 show: Quandora.bases.show('base_id')
-ask: Quandora.bases.ask('base_id')
+ask: Quandora.bases.ask('base_id', args)
+the args it must be:
+{
+  "title": "title",
+  "content": "content",
+  "content_type": "default is markdown"
+}
+
 follow: Quandora.bases.follow('base_id')
 mlt: Quandora.bases.mlt('base_id')
 
