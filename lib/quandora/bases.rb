@@ -20,11 +20,11 @@ class Quandora::Bases < Quandora::Request
 
   def ask(base_id, args = {})
     body = {
-      "type" : "post-question",
-      "data" : {
-        "title" : args["title"],
-        "content" : args["content"],
-        "contentType" : args["content_type"] || "markdown"
+      "type": "post-question",
+      "data": {
+        "title": args["title"],
+        "content": args["content"],
+        "contentType": args["content_type"] || "markdown"
       }
     }
 
