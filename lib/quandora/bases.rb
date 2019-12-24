@@ -8,6 +8,7 @@ class Quandora::Bases < Quandora::Request
     @api = "kb/#{base_id}/list"
     @params.merge!("q": args["q"]) unless args.fetch('q', nil).nil?
     @params.merge!("tag": args["tag"]) unless args.fetch('tag', nil).nil?
+    @params.merge!("s": args["s"]) unless args.fetch('s', nil).nil?
     index
   end
 

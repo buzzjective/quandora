@@ -1,6 +1,11 @@
 # show
 
 class Quandora::Question < Quandora::Request
+  def detail(question_id)
+    @api = "q/"
+    show("#{question_id}")
+  end
+
   def view(question_id, args = {})
     @api = "q/"
     show("#{question_id}/view")

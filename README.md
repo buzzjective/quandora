@@ -112,6 +112,7 @@ most_voted_question: Quandora.bases.report('base_id').most_voted_question
 ------------------------------------------------------
 
 question apis:
+detail: Quandora.question.detail('question_id')
 view: Quandora.question.view('question_id')
 mlt: Quandora.question.mlt('question_id')
 
