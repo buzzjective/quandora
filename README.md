@@ -126,7 +126,7 @@ mlt: Quandora.question.mlt('question_id')
 answer: Quandora.question.answer('question_id', args)
 the args it must be:
 {
-  "content_type": "content_type",
+  "content_type": "default is markdown",
   "content": "content"
 }
 

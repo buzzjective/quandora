@@ -21,7 +21,7 @@ class Quandora::Question < Quandora::Request
       "type": "post-answer",
       "data": {
         "content": args["content"],
-        "contentType": args["content_type"]
+        "contentType": args["content_type"] || "markdown"
       }
     }
     resp = @conn.post("q/#{question_id}/answer") do |req|
