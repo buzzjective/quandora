@@ -1,6 +1,11 @@
 # show
 
 class Quandora::Question < Quandora::Request
+  def detail(question_id)
+    @api = "q/"
+    show("#{question_id}")
+  end
+
   def view(question_id, args = {})
     @api = "q/"
     show("#{question_id}/view")
@@ -16,7 +21,7 @@ class Quandora::Question < Quandora::Request
       "type": "post-answer",
       "data": {
         "content": args["content"],
-        "contentType": args["content_type"]
+        "contentType": args["content_type"] || "markdown"
       }
     }
     resp = @conn.post("q/#{question_id}/answer") do |req|

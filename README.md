@@ -76,14 +76,22 @@ the args it must be:
 ------------------------------------------------------
 
 bases apis:
+index: Quandora.bases.index
 questions: Quandora.bases.questions('base_id')
 show: Quandora.bases.show('base_id')
-ask: Quandora.bases.ask('base_id')
+ask: Quandora.bases.ask('base_id', args)
+the args it must be:
+{
+  "title": "title",
+  "content": "content",
+  "content_type": "default is markdown"
+}
+
 follow: Quandora.bases.follow('base_id')
 mlt: Quandora.bases.mlt('base_id')
 
 bases tags apis:
-index: Quandora.bases.tag('base_id').index
+index: Quandora.bases.tag('base_id').list
 show: Quandora.bases.tag('base_id').show('tag_name')
 
 create: Quandora.bases.tag('base_id').create(args)
@@ -111,13 +119,14 @@ most_voted_question: Quandora.bases.report('base_id').most_voted_question
 ------------------------------------------------------
 
 question apis:
+detail: Quandora.question.detail('question_id')
 view: Quandora.question.view('question_id')
 mlt: Quandora.question.mlt('question_id')
 
 answer: Quandora.question.answer('question_id', args)
 the args it must be:
 {
-  "content_type": "content_type",
+  "content_type": "default is markdown",
   "content": "content"
 }
 

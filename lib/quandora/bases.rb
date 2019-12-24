@@ -1,8 +1,14 @@
 class Quandora::Bases < Quandora::Request
+  def list
+    @api = "kb/"
+    index
+  end
+
   def questions(base_id, args = {})
     @api = "kb/#{base_id}/list"
     @params.merge!("q": args["q"]) unless args.fetch('q', nil).nil?
     @params.merge!("tag": args["tag"]) unless args.fetch('tag', nil).nil?
+    @params.merge!("s": args["s"]) unless args.fetch('s', nil).nil?
     index
   end
 
@@ -13,8 +19,19 @@ class Quandora::Bases < Quandora::Request
   end
 
   def ask(base_id, args = {})
-    @api = "kb/#{base_id}/ask"
-    index
+    body = {
+      "type": "post-question",
+      "data": {
+        "title": args["title"],
+        "content": args["content"],
+        "contentType": args["content_type"] || "markdown"
+      }
+    }
+
+    resp = @conn.post("kb/#{base_id}/ask") do |req|
+      req.body = body.to_json
+      req.headers['Content-Type'] = 'application/json'
+    end
   end
 
   def follow(base_id, args = {})
