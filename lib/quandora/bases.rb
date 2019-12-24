@@ -1,5 +1,5 @@
 class Quandora::Bases < Quandora::Request
-  def index
+  def list
     @api = "kb/"
     index
   end

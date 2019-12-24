@@ -76,6 +76,7 @@ the args it must be:
 ------------------------------------------------------
 
 bases apis:
+index: Quandora.bases.index
 questions: Quandora.bases.questions('base_id')
 show: Quandora.bases.show('base_id')
 ask: Quandora.bases.ask('base_id')
@@ -83,7 +84,7 @@ follow: Quandora.bases.follow('base_id')
 mlt: Quandora.bases.mlt('base_id')
 
 bases tags apis:
-index: Quandora.bases.tag('base_id').index
+index: Quandora.bases.tag('base_id').list
 show: Quandora.bases.tag('base_id').show('tag_name')
 
 create: Quandora.bases.tag('base_id').create(args)
