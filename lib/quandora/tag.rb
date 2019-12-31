@@ -5,8 +5,17 @@ class Quandora::Tag
     @id = id
   end
 
-  def index
-    resp = @conn.get("#{@api}/#{@id}/tags")
+  def index(args={})
+    query = {}
+    query.merge!("q": args["q"]) unless args.fetch('q', nil).nil?
+    query.merge!("s": args["s"]) unless args.fetch('s', nil).nil?
+    query.merge!("o": args["o"]) unless args.fetch('o', nil).nil?
+    query.merge!("l": args["l"]) unless args.fetch('l', nil).nil?
+
+    resp = @conn.get("#{@api}/#{@id}/tags") do |req|
+      req.params = query
+      req.headers['Content-Type'] = 'application/json'
+    end
   end
 
   def show(tag_name, query = nil)
