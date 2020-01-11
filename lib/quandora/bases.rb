@@ -6,6 +6,8 @@ class Quandora::Bases < Quandora::Request
 
   def questions(base_id, args = {})
     @api = "kb/#{base_id}/list"
+    @params.merge!("o": args["o"]) unless args.fetch('o', nil).nil?
+    @params.merge!("l": args["l"]) unless args.fetch('l', nil).nil?
     @params.merge!("q": args["q"]) unless args.fetch('q', nil).nil?
     @params.merge!("tag": args["tag"]) unless args.fetch('tag', nil).nil?
     @params.merge!("s": args["s"]) unless args.fetch('s', nil).nil?
