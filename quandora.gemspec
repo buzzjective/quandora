@@ -13,8 +13,6 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://buzzjective.com/"
   spec.license       = "MIT"
 
-  spec.metadata["allowed_push_host"] = "https://buzzjective.com/"
-
   spec.metadata["homepage_uri"] = "https://buzzjective.com/"
   spec.metadata["source_code_uri"] = "https://github.com/buzzjective/quandora/"
   spec.metadata["changelog_uri"] = "https://github.com/buzzjective/quandora/"
