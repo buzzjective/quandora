@@ -5,19 +5,19 @@ require "quandora/version"
 Gem::Specification.new do |spec|
   spec.name          = "quandora"
   spec.version       = Quandora::VERSION
-  spec.authors       = ["Buzzjective"]
+  spec.authors       = ["buzzjective"]
   spec.email         = ["hamid@buzzjective.com"]
 
-  spec.summary       = %q{a simple gem to connect to the quandora}
-  spec.description   = %q{a simple gem to connect to the quandora}
+  spec.summary       = %q{A simple gem to connect to the quandora}
+  spec.description   = %q{A simple gem to connect to the quandora}
   spec.homepage      = "https://buzzjective.com/"
   spec.license       = "MIT"
 
-  spec.metadata["allowed_push_host"] = "'https://buzzjective.com/'"
+  spec.metadata["allowed_push_host"] = "https://buzzjective.com/"
 
   spec.metadata["homepage_uri"] = "https://buzzjective.com/"
-  spec.metadata["source_code_uri"] = "https://buzzjective.com/"
-  spec.metadata["changelog_uri"] = "https://buzzjective.com/"
+  spec.metadata["source_code_uri"] = "https://github.com/buzzjective/quandora/"
+  spec.metadata["changelog_uri"] = "https://github.com/buzzjective/quandora/"
 
   # Specify which files should be added to the gem when it is released.
   # The `git ls-files -z` loads the files in the RubyGem that have been added into git.
