@@ -44,7 +44,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  bundler (~> 2.0)
+  bundler (~> 2.3, >= 2.3.12)
   byebug (~> 11.1, >= 11.1.3)
   quandora!
   rake (~> 13.0)
