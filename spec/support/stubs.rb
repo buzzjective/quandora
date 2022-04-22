@@ -5,7 +5,7 @@ module Stubs
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
         'Authorization'=>'Basic ZXhhbXBsZUBleGFtcGxlLmNvbTpwYXNzd29yZA==',
-        'User-Agent'=>'Faraday v0.17.1'
+        'User-Agent'=>'Faraday v2.2.0'
       }).
       to_return(status: 200, body: "", headers: {})
 
@@ -25,10 +25,10 @@ module Stubs
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
         'Authorization'=>'Basic ZXhhbXBsZUBleGFtcGxlLmNvbTpwYXNzd29yZA==',
         'Content-Type'=>'application/json',
-        'User-Agent'=>'Faraday v0.17.1'
+        'User-Agent'=>'Faraday v2.2.0'
         }).
       to_return(status: 201, body: "", headers: {})
-    
+
     stub_request(:post, "https://example.quandora.com/m/json/q/94114b76-9189-405e-87c3-6d0311840d05/answer").
       with(
         body: "{\"type\":\"post-answer\",\"data\":{\"content\":null,\"contentType\":null}}",
@@ -37,7 +37,7 @@ module Stubs
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
         'Authorization'=>'Basic ZXhhbXBsZUBleGFtcGxlLmNvbTpwYXNzd29yZA==',
         'Content-Type'=>'application/json',
-        'User-Agent'=>'Faraday v0.17.1'
+        'User-Agent'=>'Faraday v2.2.0'
         }).
       to_return(status: 201, body: "", headers: {})
 
@@ -49,7 +49,7 @@ module Stubs
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
         'Authorization'=>'Basic ZXhhbXBsZUBleGFtcGxlLmNvbTpwYXNzd29yZA==',
         'Content-Type'=>'application/json',
-        'User-Agent'=>'Faraday v0.17.1'
+        'User-Agent'=>'Faraday v2.2.0'
         }).
       to_return(status: 201, body: "", headers: {})
 
@@ -61,7 +61,7 @@ module Stubs
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
         'Authorization'=>'Basic ZXhhbXBsZUBleGFtcGxlLmNvbTpwYXNzd29yZA==',
         'Content-Type'=>'application/json',
-        'User-Agent'=>'Faraday v0.17.1'
+        'User-Agent'=>'Faraday v2.2.0'
         }).
       to_return(status: 201, body: "", headers: {})
 
@@ -71,10 +71,10 @@ module Stubs
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
         'Authorization'=>'Basic ZXhhbXBsZUBleGFtcGxlLmNvbTpwYXNzd29yZA==',
-        'User-Agent'=>'Faraday v0.17.1'
+        'User-Agent'=>'Faraday v2.2.0'
         }).
       to_return(status: 200, body: "", headers: {})
-    
+
     stub_request(:put, "https://example.quandora.com/q/94114b76-9189-405e-87c3-6d0311840d05/tags/tag1,tag2,tag3").
       with(
         headers: {
@@ -83,10 +83,10 @@ module Stubs
         'Authorization'=>'Basic ZXhhbXBsZUBleGFtcGxlLmNvbTpwYXNzd29yZA==',
         'Content-Length'=>'0',
         'Content-Type'=>'application/json',
-        'User-Agent'=>'Faraday v0.17.1'
+        'User-Agent'=>'Faraday v2.2.0'
         }).
       to_return(status: 201, body: "", headers: {})
-    
+
     stub_request(:post, "https://example.quandora.com/q/94114b76-9189-405e-87c3-6d0311840d05/tags/tag1,tag2,tag3").
       with(
         headers: {
@@ -95,7 +95,7 @@ module Stubs
         'Authorization'=>'Basic ZXhhbXBsZUBleGFtcGxlLmNvbTpwYXNzd29yZA==',
         'Content-Length'=>'0',
         'Content-Type'=>'application/json',
-        'User-Agent'=>'Faraday v0.17.1'
+        'User-Agent'=>'Faraday v2.2.0'
         }).
       to_return(status: 201, body: "", headers: {})
 
@@ -107,17 +107,17 @@ module Stubs
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
         'Authorization'=>'Basic ZXhhbXBsZUBleGFtcGxlLmNvbTpwYXNzd29yZA==',
         'Content-Type'=>'application/json',
-        'User-Agent'=>'Faraday v0.17.1'
+        'User-Agent'=>'Faraday v2.2.0'
         }).
       to_return(status: 201, body: "", headers: {})
-      
+
     stub_request(:delete, "https://example.quandora.com/m/json/kb/94114b76-9189-405e-87c3-6d0311840d05/tags/tag_name").
       with(
         headers: {
         'Accept'=>'*/*',
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
         'Authorization'=>'Basic ZXhhbXBsZUBleGFtcGxlLmNvbTpwYXNzd29yZA==',
-        'User-Agent'=>'Faraday v0.17.1'
+        'User-Agent'=>'Faraday v2.2.0'
         }).
       to_return(status: 200, body: "", headers: {})
 
@@ -129,7 +129,7 @@ module Stubs
         'Accept-Encoding'=>'gzip;q=1.0,deflate;q=0.6,identity;q=0.3',
         'Authorization'=>'Basic ZXhhbXBsZUBleGFtcGxlLmNvbTpwYXNzd29yZA==',
         'Content-Type'=>'application/json',
-        'User-Agent'=>'Faraday v0.17.1'
+        'User-Agent'=>'Faraday v2.2.0'
         }).
       to_return(status: 201, body: "", headers: {})
   end
