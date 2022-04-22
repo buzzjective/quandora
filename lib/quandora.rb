@@ -37,7 +37,7 @@ module Quandora
       define_method :"#{api}" do |args = {}|
         @conn = Faraday.new(url: configuration.url) do |conn|
           conn.adapter Faraday.default_adapter # make requests with Net::HTTP
-          conn.basic_auth(configuration.username, configuration.password)
+          conn.set_basic_auth(configuration.username, configuration.password)
         end
 
         find_api(api).new(@conn, api, args)
