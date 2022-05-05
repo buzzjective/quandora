@@ -1,4 +1,4 @@
-# 1.2.0
+# 0.2.0
 
 Updated [byebug](https://github.com/deivid-rodriguez/byebug) version to 11.1.3
 
