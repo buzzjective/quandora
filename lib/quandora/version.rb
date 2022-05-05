@@ -1,3 +1,3 @@
 module Quandora
-  VERSION = "1.2.0"
+  VERSION = "0.2.0"
 end
