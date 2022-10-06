@@ -6,6 +6,8 @@ class Quandora::Tag
   end
 
   def index(args={})
+    args = args.stringify_keys
+
     query = {}
     query.merge!("q": args["q"]) unless args.fetch('q', nil).nil?
     query.merge!("s": args["s"]) unless args.fetch('s', nil).nil?
@@ -23,14 +25,16 @@ class Quandora::Tag
   end
 
   def create(args)
+    args = args.stringify_keys
+
     body = {
       "type": "tag-content",
       "data": {
-        "name": args[:name],
+        "name": args['name'],
         "category": nil,
         "location": nil,
-        "url": args[:url],
-        "content": args[:content]
+        "url": args['url'],
+        "content": args['content']
       }
     }
 
@@ -41,6 +45,8 @@ class Quandora::Tag
   end
 
   def update(args)
+    args = args.stringify_keys
+
     body = {
       "type": "tag-content",
       "data": {

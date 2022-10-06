@@ -5,6 +5,8 @@ class Quandora::Users < Quandora::Request
   end
 
   def create(args)
+    args = args.stringify_keys
+
     body = {
       "type": "post-user",
       "data": {

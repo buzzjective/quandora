@@ -102,7 +102,7 @@ the args it must be:
   "content": "content"
 }
 
-udpate: Quandora.bases.tag('base_id').udpate(args)
+update: Quandora.bases.tag('base_id').update(args)
 the args it must be:
 {
   "uid": "uid",

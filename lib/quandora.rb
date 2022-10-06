@@ -40,6 +40,7 @@ module Quandora
           conn.set_basic_auth(configuration.username, configuration.password)
         end
 
+        args = args.stringify_keys
         find_api(api).new(@conn, api, args)
       end
     end

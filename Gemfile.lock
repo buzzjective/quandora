@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    quandora (0.1.0)
+    quandora (0.3.0)
       faraday (~> 2.2)
 
 GEM

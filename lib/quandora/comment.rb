@@ -6,6 +6,8 @@ class Quandora::Comment
   end
 
   def create(args)
+    args = args.stringify_keys
+
     body = {
       "type": "post-comment",
       "data": {
@@ -20,6 +22,8 @@ class Quandora::Comment
   end
 
   def update(args)
+    args = args.stringify_keys
+
     body = {
       "type": "post-comment",
       "data": {
