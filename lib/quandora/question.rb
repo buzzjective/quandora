@@ -17,6 +17,8 @@ class Quandora::Question < Quandora::Request
   end
 
   def answer(question_id, args)
+    args = args.stringify_keys
+
     body = {
       "type": "post-answer",
       "data": {
@@ -31,6 +33,8 @@ class Quandora::Question < Quandora::Request
   end
 
   def vote(question_id, args)
+    args = args.stringify_keys
+
     body = {
       "type": "boolean",
       "data": args["vote"]
@@ -43,10 +47,10 @@ class Quandora::Question < Quandora::Request
   end
 
   def comment(question_id)
-    Quandora::Comment.new(@conn, "q", question_id)    
+    Quandora::Comment.new(@conn, "q", question_id)
   end
 
   def tag(answer_id)
-    Quandora::Tag.new(@conn, "q", answer_id)    
+    Quandora::Tag.new(@conn, "q", answer_id)
   end
 end

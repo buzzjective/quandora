@@ -1,5 +1,7 @@
 class Quandora::Answer < Quandora::Request
   def vote(answer_id, args)
+    args = args.stringify_keys
+
     body = {
       "type": "boolean",
       "data": args["vote"]
@@ -12,6 +14,8 @@ class Quandora::Answer < Quandora::Request
   end
 
   def accept(answer_id, args)
+    args = args.stringify_keys
+
     body = {
       "type": "boolean",
       "data": args["accept"]
@@ -24,6 +28,6 @@ class Quandora::Answer < Quandora::Request
   end
 
   def comment(answer_id)
-    Comment.new(@conn, "a", answer_id)    
+    Comment.new(@conn, "a", answer_id)
   end
 end

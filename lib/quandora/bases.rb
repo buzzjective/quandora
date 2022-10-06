@@ -5,6 +5,8 @@ class Quandora::Bases < Quandora::Request
   end
 
   def questions(base_id, args = {})
+    args = args.stringify_keys
+
     @api = "kb/#{base_id}/list"
     @params.merge!("o": args["o"]) unless args.fetch('o', nil).nil?
     @params.merge!("l": args["l"]) unless args.fetch('l', nil).nil?
@@ -15,12 +17,16 @@ class Quandora::Bases < Quandora::Request
   end
 
   def mlt(base_id, args = {})
+    args = args.stringify_keys
+
     @api = "kb/#{base_id}/mlt"
     @params.merge!("q": args["q"]) unless args.fetch('q', nil).nil?
     index
   end
 
   def ask(base_id, args = {})
+    args = args.stringify_keys
+
     body = {
       "type": "post-question",
       "data": {
@@ -42,10 +48,10 @@ class Quandora::Bases < Quandora::Request
   end
 
   def tag(kb_id)
-    Quandora::Tag.new(@conn, "kb", kb_id)    
+    Quandora::Tag.new(@conn, "kb", kb_id)
   end
 
   def report(kb_id)
-    Quandora::Report.new(@conn, "kb", kb_id)    
+    Quandora::Report.new(@conn, "kb", kb_id)
   end
 end
