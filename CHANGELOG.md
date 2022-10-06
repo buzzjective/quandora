@@ -1,3 +1,7 @@
+# 0.3.0
+
+Now we support string and symbol keys in the `args` option.
+
 # 0.2.0
 
 Updated [byebug](https://github.com/deivid-rodriguez/byebug) version to 11.1.3
